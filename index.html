@@ -13,8 +13,8 @@
       --border: #1e1e2e;
       --text: #e0e0f0;
       --muted: #6b6b8a;
-      --neon-snake: #39ff14;
-      --neon-head: #7fff00;
+      --neon-snake: #ff8c00;
+      --neon-head: #ffb347;
       --neon-food: #ff2d78;
       --neon-score: #00e5ff;
       --grid: rgba(255,255,255,0.03);
@@ -189,11 +189,11 @@
       bg:      '#0d0d0f',
       surface: '#13131a',
       grid:    'rgba(255,255,255,0.028)',
-      snake:   '#39ff14',
-      head:    '#b0ff60',
+      snake:   '#ff8c00',
+      head:    '#ffb347',
       food:    '#ff2d78',
       foodGlow:'rgba(255,45,120,0.55)',
-      snakeGlow:'rgba(57,255,20,0.45)',
+      snakeGlow:'rgba(255,140,0,0.45)',
     };
 
     // ── State ─────────────────────────────────────────────────────────────
@@ -416,8 +416,8 @@
 
     function blendSnake(t) {
       // Head is bright green → tail fades to darker teal
-      const r1 = 57,  g1 = 255, b1 = 20;
-      const r2 = 10,  g2 = 120, b2 = 60;
+      const r1 = 255, g1 = 140, b1 = 0;
+      const r2 = 140, g2 = 60,  b2 = 0;
       const r = Math.round(r1 + (r2 - r1) * (1 - t));
       const g = Math.round(g1 + (g2 - g1) * (1 - t));
       const b = Math.round(b1 + (b2 - b1) * (1 - t));
